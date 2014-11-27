@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  reservation_id: 
+  flight_id: 
+  pos_x: 
+  pos_y: MyString
+  availability: false
+  spare: MyString
+
+two:
+  user_id: 
+  reservation_id: 
+  flight_id: 
+  pos_x: 
+  pos_y: MyString
+  availability: false
+  spare: MyString
