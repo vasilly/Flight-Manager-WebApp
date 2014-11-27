@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resources :aeroplanes
+  resources :flights
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

@@ -4,7 +4,14 @@
 <div class="form-group">
   <label for=""><strong>flight: </strong><%= f %></label>
 </div>
-<button>Go</button>
+
+<% else %>
+
+<div class="field">
+  <%= f.label :flight_no %><br>
+  <%= f.text_field :flight_no %>
+</div>
+
 <% end %>
 
 <% else %>
