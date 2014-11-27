@@ -19,7 +19,7 @@ class AeroplanesController < ApplicationController
   end
 
   def update
-    @aeroplane = Aeroplanes.find(params[:id])
+    @aeroplane = Aeroplane.find(params[:id])
     @aeroplane.update(book_params)
     redirect_to aeroplane_path(@aeroplane.id)
   end

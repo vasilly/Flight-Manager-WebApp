@@ -1,1 +1,34 @@
-<!-- aeroplanes index -->
+<h1>Aeroplanes</h1>
+
+<%= link_to 'New Aeroplane', new_aeroplane_path %>
+
+</br>
+
+<% if @aeroplanes%>
+	<% @aeroplanes.each do |aeroplane|%>
+	
+	<TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
+		
+		<TR>
+      		<TH COLSPAN="2">
+         		<H3><BR><%=aeroplane.name%></H3>
+         	</TH>
+   		</TR>
+
+      	<TH>Columns: <%=aeroplane.cols%></TH>
+      	<TH>Rows: <%=aeroplane.rows%></TH>
+
+	   	<TR ALIGN="CENTER">
+	   		<%aeroplane.cols.times do { } %>
+	    	<TD>Data 1</TD>
+	    	<TD>Data 2</TD>
+	   	</TR>
+
+	</TABLE> 
+
+	</br>
+
+	<% end %>
+	<% else %>
+		<p>There are no aeroplanes in database, enter an aeroplane</p>
+<% end %>
