@@ -1,0 +1,27 @@
+<h2>Listing flights</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Flight</th>
+      <th>Plane</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Departure</th>
+      <th>Arrival</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @flights.each do |flight| %>
+      <tr>
+        <td><%= flight.id %></td>
+        <td><%= flight.plane_id %></td>
+        <td><%= flight.origin %></td>
+        <td><%= flight.destination %></td>
+        <td><%= flight.dep_date.strftime("%a %d %b %Y %H:%m %p")%></td>
+        <td><%= flight.arr_date.strftime("%a %d %b %Y %H:%m %p")%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

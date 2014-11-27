@@ -1,15 +1,15 @@
 class FlightsController < ApplicationController
 
   def index
-    @flights = Aeroplane.all
+    @flights = Flight.all
   end
 
   def new
-    @flights = Aeroplane.new
+    @flights = Flight.new
   end
 
   def create
-    @flights = Aeroplane.new(aeroplane_params)
+    @flights = Flight.new(flight_params)
 
     if @flights.save
       redirect_to root_path, :notice => 'new aeroplane has been successfully created'
@@ -20,20 +20,20 @@ class FlightsController < ApplicationController
   end
 
   def update
-    @aeroplane = Aeroplanes.find(params[:id])
-    @aeroplane.update(book_params)
-    redirect_to aeroplane_path(@aeroplane.id)
+    @flight = Flight.find(params[:id])
+    @flight.update(book_params)
+    redirect_to flight_path(@flight.id)
   end
 
   def destroy
-    @aeroplane = Aeroplane.find(params[:id])
-    @aeroplane.destroy
+    @flight = Flight.find(params[:id])
+    @flight.destroy
     redirect_to root_path
   end
 
   private
-  def aeroplane_params
-    params.require(:aeroplane).permit(:cols, :rows, :name)
+  def flight_params
+    params.require(:flight).permit(:plane_id, :origin, :destination, :dep_date, :arr_date)
   end
 
 end

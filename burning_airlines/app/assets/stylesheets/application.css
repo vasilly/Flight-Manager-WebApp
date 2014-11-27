@@ -13,12 +13,27 @@
  *= require_tree .
  *= require_self
  */
-table {
-	border-collapse: collapse;
-	border: 1px solid black;
-	
-}
 
-table h3 {
-	color: red;
+
+
+/*     http://learn.shayhowe.com/html-css/organizing-data-with-tables/      */
+
+table {
+  border-spacing: 0;
+  border: 1px solid black;
+
+}
+th, td {
+  padding: 1em 1em;
+}
+thead {
+  background: #395870;
+  color: #fff;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
 }
