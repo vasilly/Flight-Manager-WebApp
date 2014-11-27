@@ -10,14 +10,16 @@ class AeroplanesController < ApplicationController
 
   def create
     @aeroplanes = Aeroplane.new(aeroplane_params)
-  end 
 
-  def destroy
+    if
+    end
+
+    def destroy
+    end
+
+    private
+    def aeroplane_params
+      params.require(:aeroplane).permit(:cols, :rows, :name)
+    end
+
   end
-
-  private
-  def aeroplane_params
-    params.require(:aeroplane).permit(:cols, :rows, :name)
-  end
-
-end
