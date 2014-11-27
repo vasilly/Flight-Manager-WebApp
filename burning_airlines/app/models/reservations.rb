@@ -1,2 +1,2 @@
-class Reservations < ActiveRecord::Base
+class Reservation < ActiveRecord::Base
 end

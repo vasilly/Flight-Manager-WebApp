@@ -1,2 +1,2 @@
-class Flights < ActiveRecord::Base
+class Flight < ActiveRecord::Base
 end
