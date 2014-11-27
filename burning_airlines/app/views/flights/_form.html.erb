@@ -1,0 +1,12 @@
+<% if @flights%>
+
+<% form_for @flights do |f| %>
+<div class="form-group">
+  <label for=""><strong>flight: </strong><%= f %></label>
+</div>
+<button>Go</button>
+<% end %>
+
+<% else %>
+No aeroplanes in database, enter an flights
+<% end %>
