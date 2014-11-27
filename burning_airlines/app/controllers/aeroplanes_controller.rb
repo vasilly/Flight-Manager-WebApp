@@ -1,11 +1,11 @@
 class AeroplanesController < ApplicationController
 
   def new
-    @aeroplane = Areoplane.new
+    @aeroplanes = Aeroplane.new
   end
 
   def index
-    @aeroplanes = Areoplane.all
+    @aeroplanes = Aeroplane.all
   end
 
   def create
