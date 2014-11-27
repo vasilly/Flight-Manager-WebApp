@@ -1,8 +1,8 @@
 class CreateAeroplanes < ActiveRecord::Migration
   def change
     create_table :aeroplanes do |t|
-      t.int :cols
-      t.int :rows
+      t.integer :cols
+      t.integer :rows
       t.string :name
       t.string :spare
 
