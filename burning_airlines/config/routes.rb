@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-
   resources :aeroplanes
 
   get '/login' => 'session#new'
