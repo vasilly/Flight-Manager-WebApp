@@ -3,10 +3,17 @@
 <head>
   <title>BurningAirlines</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<% if logged_in? %>
+    <li><%= link_to 'logout', login_path, :method => :delete, :data => { :confirm => 'are you sure?'} %></li>
+  <% else %>
+    <li><%= link_to 'login', login_path %></li>
+    <li><%= link_to 'New User', sign_up_path %></li>
+  <% end %>
 
 <%= yield %>
 
