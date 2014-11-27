@@ -1,0 +1,20 @@
+<div class="form-res-wrapper">
+    <%= form_for @reservation do |f| %>
+
+
+        <!-- passenger name -->
+
+        <%= f.collection :name, @users, :id, :name%>
+
+        <!-- Flight details  -->
+        <%= f.collection :flight_no, @flights, :id, :flight_no %>
+
+
+
+
+        <%= f.submit %>
+      </div>
+
+
+    <% end %>
+</div>
